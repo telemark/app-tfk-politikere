@@ -6,6 +6,18 @@ var wreckOptions = {
   json: true
 }
 
+function getFrontpage (request, reply) {
+  var viewOptions = {}
+  Wreck.get(config.API_URL + '/parties', wreckOptions, function (error, res, payload) {
+    if (error) {
+      reply(error)
+    } else {
+      viewOptions.parties = payload
+    }
+    reply.view('index', viewOptions)
+  })
+}
+
 function getPoliticians (request, reply) {
   var skipNum = request.query.skip ? parseInt(request.query.skip, 10) : 0
   var limitNum = request.query.limit ? parseInt(request.query.limit, 10) : 20
@@ -66,6 +78,8 @@ function getCommitteeMembers (request, reply) {
     reply(error || payload)
   })
 }
+
+module.exports.getFrontpage = getFrontpage
 
 module.exports.getPoliticians = getPoliticians
 

@@ -5,6 +5,14 @@ var handlers = require('../handlers')
 var routes = [
   {
     method: 'GET',
+    path: '/',
+    config: {
+      handler: handlers.getFrontpage,
+      description: 'Show the frontpage'
+    }
+  },
+  {
+    method: 'GET',
     path: '/politicians',
     config: {
       handler: handlers.getPoliticians,
