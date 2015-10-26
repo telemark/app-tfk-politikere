@@ -46,7 +46,7 @@ function getPoliticians (request, reply) {
 }
 
 function searchPoliticians (request, reply) {
-  Wreck.get(config.API_URL + '/politicians/search/request.params.searchText', wreckOptions, function (error, res, payload) {
+  Wreck.get(config.API_URL + '/politicians/search/' + request.params.searchText, wreckOptions, function (error, res, payload) {
     reply(error || payload)
   })
 }
