@@ -6,7 +6,7 @@ module.exports = function(context) {
   var myRole = ''
   myCommittees.forEach(function(committee){
     if (committee.groupRecno === committeeID) {
-      myRole = committee.roleDesription
+      myRole = committee.roleDescription
     }
   })
   return myRole

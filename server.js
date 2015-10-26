@@ -23,6 +23,9 @@ server.register(require('vision'), function (err) {
     relativeTo: __dirname,
     path: 'views',
     helpersPath: 'views/helpers',
+    partialsPath: 'views/partials',
+    layoutPath: 'views/layouts',
+    layout: true,
     compileMode: 'sync'
   })
 })

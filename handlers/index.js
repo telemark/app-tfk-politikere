@@ -46,8 +46,13 @@ function getPoliticians (request, reply) {
 }
 
 function searchPoliticians (request, reply) {
-  Wreck.get(config.API_URL + '/politicians/search/' + request.params.searchText, wreckOptions, function (error, res, payload) {
-    reply(error || payload)
+  var searchText = request.query.query
+  Wreck.get(config.API_URL + '/politicians/search/' + searchText, wreckOptions, function (error, res, payload) {
+    if (error) {
+      reply(error)
+    } else {
+      reply.view('search', {politicians: payload, query: searchText})
+    }
   })
 }
 
@@ -64,7 +69,11 @@ function getPolitician (request, reply) {
 
 function getParties (request, reply) {
   Wreck.get(config.API_URL + '/parties', wreckOptions, function (error, res, payload) {
-    reply(error || payload)
+    if (error) {
+      reply(error)
+    } else {
+      reply.view('parties', {parties: payload})
+    }
   })
 }
 
@@ -109,7 +118,11 @@ function getPartyMembers (request, reply) {
 
 function getCommittees (request, reply) {
   Wreck.get(config.API_URL + '/committees', wreckOptions, function (error, res, payload) {
-    reply(error || payload)
+    if (error) {
+      reply(error)
+    } else {
+      reply.view('committees', {committees: payload})
+    }
   })
 }
 

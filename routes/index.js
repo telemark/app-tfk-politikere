@@ -21,7 +21,7 @@ var routes = [
   },
   {
     method: 'GET',
-    path: '/politicians/search/{searchText}',
+    path: '/search',
     config: {
       handler: handlers.searchPoliticians,
       description: 'Search all politicians'
@@ -81,6 +81,20 @@ var routes = [
     config: {
       handler: handlers.getCommitteeMembers,
       description: 'List all members of given political committee by {committeeID}'
+    }
+  },
+  {
+    method: 'GET',
+    path: '/kontakt',
+    handler: function (request, reply) {
+      reply.view('kontakt')
+    }
+  },
+  {
+    method: 'GET',
+    path: '/personvern',
+    handler: function (request, reply) {
+      reply.view('personvern')
     }
   }
 ]
