@@ -30,6 +30,21 @@ server.register(require('vision'), function (err) {
   })
 })
 
+server.register(require('inert'), function (err) {
+  if (err) {
+    throw err
+  }
+  server.route({
+    method: 'GET',
+    path: '/public/{param*}',
+    handler: {
+      directory: {
+        path: 'public'
+      }
+    }
+  })
+})
+
 server.register([
   {
     register: politicianService,
