@@ -8,13 +8,32 @@ var wreckOptions = {
 
 function getFrontpage (request, reply) {
   var viewOptions = {}
+  var jobsToDo = 2
+  var jobsDone = 0
+
+  function allAboard () {
+    jobsDone ++
+    if (jobsDone === jobsToDo) {
+      reply.view('index', viewOptions)
+    }
+  }
+
   Wreck.get(config.API_URL + '/parties', wreckOptions, function (error, res, payload) {
     if (error) {
       reply(error)
     } else {
       viewOptions.parties = payload
     }
-    reply.view('index', viewOptions)
+    allAboard()
+  })
+
+  Wreck.get(config.API_URL + '/committees', wreckOptions, function (error, res, payload) {
+    if (error) {
+      reply(error)
+    } else {
+      viewOptions.committees = payload
+    }
+    allAboard()
   })
 }
 
@@ -35,7 +54,11 @@ function searchPoliticians (request, reply) {
 function getPolitician (request, reply) {
   var pID = parseInt(request.params.politicianID, 10)
   Wreck.get(config.API_URL + '/politicians/' + pID, wreckOptions, function (error, res, payload) {
-    reply(error || payload)
+    if (error) {
+      reply(error)
+    } else {
+      reply.view('politician', {politicians: payload})
+    }
   })
 }
 
@@ -47,8 +70,33 @@ function getParties (request, reply) {
 
 function getParty (request, reply) {
   var pID = parseInt(request.params.partyID, 10)
+  var viewOptions = {}
+  var jobsToDo = 2
+  var jobsDone = 0
+
+  function allAboard () {
+    jobsDone ++
+    if (jobsDone === jobsToDo) {
+      reply.view('party', viewOptions)
+    }
+  }
+
   Wreck.get(config.API_URL + '/parties/' + pID, wreckOptions, function (error, res, payload) {
-    reply(error || payload)
+    if (error) {
+      reply(error)
+    } else {
+      viewOptions.parties = payload
+    }
+    allAboard()
+  })
+
+  Wreck.get(config.API_URL + '/parties/' + pID + '/members', wreckOptions, function (error, res, payload) {
+    if (error) {
+      reply(error)
+    } else {
+      viewOptions.members = payload
+    }
+    allAboard()
   })
 }
 
@@ -67,9 +115,35 @@ function getCommittees (request, reply) {
 
 function getCommittee (request, reply) {
   var cID = parseInt(request.params.committeeID, 10)
+  var viewOptions = {}
+  var jobsToDo = 2
+  var jobsDone = 0
+
+  function allAboard () {
+    jobsDone ++
+    if (jobsDone === jobsToDo) {
+      reply.view('committee', viewOptions)
+    }
+  }
+
   Wreck.get(config.API_URL + '/committees/' + cID, wreckOptions, function (error, res, payload) {
-    reply(error || payload)
+    if (error) {
+      reply(error)
+    } else {
+      viewOptions.committees = payload
+      allAboard()
+    }
   })
+
+  Wreck.get(config.API_URL + '/committees/' + cID + '/members', wreckOptions, function (error, res, payload) {
+    if (error) {
+      reply(error)
+    } else {
+      viewOptions.members = payload
+      allAboard()
+    }
+  })
+
 }
 
 function getCommitteeMembers (request, reply) {

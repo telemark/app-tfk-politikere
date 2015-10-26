@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+{{#each politicians}}
+    <h1>{{name}}</h1>
+    {{#each committees}}
+        <a href="/{{linkToPartyOrCommittee}}/{{groupRecno}}">{{name}}</a> {{roleDesription}}<br/>
+    {{/each}}
+{{/each}}
+
+</body>
+</html>

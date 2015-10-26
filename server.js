@@ -22,6 +22,7 @@ server.register(require('vision'), function (err) {
     },
     relativeTo: __dirname,
     path: 'views',
+    helpersPath: 'views/helpers',
     compileMode: 'sync'
   })
 })
