@@ -1,0 +1,29 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Kontaktinformasjon</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#if mail}}
+            <tr>
+                <td><span class="glyphicon glyphicon-envelope"></span>&nbsp;<a href="mailto:{{maill}}" title="Send e-post til {{mail}}">{{mail}}</a></td>
+            </tr>
+        {{/if}}
+        {{#if tlf}}
+            <tr>
+                <td><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;<a href="tel:{{tlf}}" title="Ring til telefonnummer {{tlf}}">{{tlf}}</a></td>
+            </tr>
+        {{/if}}
+        {{#if url}}
+            <tr>
+                <td><span class="glyphicon glyphicon-globe"></span>&nbsp;<a href="{{url}}" target="_blank" title="Besøk nettstedet. Åpnes i nytt vindu">{{url}}</a></td>
+            </tr>
+        {{/if}}
+        {{#if address}}
+        <tr>
+            <td><span class="glyphicon glyphicon-home"></span>&nbsp;{{address}}, {{zip}} {{place}}</td>
+        </tr>
+        {{/if}}
+    </tbody>
+</table>

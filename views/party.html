@@ -1,9 +1,7 @@
 {{#each parties}}
     <h1>{{name}}</h1>
+    {{>committee-contact-information}}
 {{/each}}
 
-<h1>Medlemmer</h1>
-
-{{#each members}}
-    <a href="/politicians/{{recno}}">{{name}}</a> <a href="mailto:{{publicMail}}">{{publicMail}}</a><br>
-{{/each}}
+<h1>Partimedlemmer</h1>
+{{>members-list}}

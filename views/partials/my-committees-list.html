@@ -1,0 +1,20 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Parti/utvalg</th>
+        <th>Rolle</th>
+    </tr>
+    </thead>
+    <tbody>
+        {{#each committees}}
+            <tr>
+                <td>
+                    <a href="/{{linkToPartyOrCommittee}}/{{groupRecno}}">{{name}}</a>
+                </td>
+                <td>
+                    {{roleDescription}}
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

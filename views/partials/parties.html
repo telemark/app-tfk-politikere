@@ -1,3 +1,16 @@
-{{#each parties}}
-    <a href="/parties/{{_id}}">{{name}}</a><br/>
-{{/each}}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Parti</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each parties}}
+            <tr>
+                <td>
+                    <a href="/parties/{{_id}}">{{name}}</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

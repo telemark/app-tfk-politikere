@@ -1,6 +1,5 @@
 {{#each politicians}}
     <h1>{{name}}</h1>
-    {{#each committees}}
-        <a href="/{{linkToPartyOrCommittee}}/{{groupRecno}}">{{name}}</a> {{roleDescription}}<br/>
-    {{/each}}
+    {{>my-contact-information}}
+    {{>my-committees-list}}
 {{/each}}

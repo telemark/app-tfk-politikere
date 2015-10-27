@@ -1,3 +1,37 @@
-{{#each politicians}}
-    <a href="/politicians/{{recno}}">{{name}}</a><br/>
-{{/each}}
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Navn</th>
+        <th>Parti</th>
+        <th>E-post</th>
+        <th>Telefon</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each politicians}}
+    <tr>
+        <td>
+            <a href="/politicians/{{recno}}" title="Gå til detaljert oversikt for {{name}}">{{name}}</a>
+        </td>
+        <td>
+            {{{myPoliticalPartyLink}}}
+        </td>
+        <td>
+            {{#if publicMail}}
+            <a href="mailto:{{publicMail}}" title="Send e-post til {{publicMail}}">{{publicMail}}</a>
+            {{/if}}
+        </td>
+        <td>
+            {{#if mobilePhone}}
+            <span class="glyphicon glyphicon-phone"></span>
+            <a href="tel:{{mobilePhone}}" title="Ring til mobiltelefonnummeret {{mobilePhone}}">{{mobilePhone}}</a>&nbsp;
+            {{/if}}
+            {{#if phone}}
+            <span class="glyphicon glyphicon-phone-alt"></span>
+            <a href="tel:{{phone}}" title="Ring til telefonnummeret {{phone}}">{{phone}}</a>
+            {{/if}}
+        </td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>

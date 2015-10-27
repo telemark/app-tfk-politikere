@@ -1,11 +1,7 @@
 {{#each committees}}
-    <div class="page-header">
-        <h1>{{name}}</h1>
-    </div>
+    <h1>{{name}}</h1>
+    {{>committee-contact-information}}
 {{/each}}
 
-<div class="page-header">
-    <h1>Utvalgsmedlemmer</h1>
-</div>
-
-{{>members-committee}}
+<h1>Utvalgsmedlemmer</h1>
+{{>members-list}}
