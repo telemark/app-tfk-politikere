@@ -1,11 +1,9 @@
-<h1>Utvalg</h1>
+<div class="page-header">
+  <h1>Politiske utvalg</h1>
+</div>
+{{>committees}}
 
-{{#each committees}}
-    <a href="/committees/{{_id}}">{{name}}</a><br/>
-{{/each}}
-
-<h1>Partier</h1>
-
-{{#each parties}}
-    <a href="/parties/{{_id}}">{{name}}</a><br/>
-{{/each}}
+<div class="page-header">
+    <h1>Politiske partier</h1>
+</div>
+{{>parties}}

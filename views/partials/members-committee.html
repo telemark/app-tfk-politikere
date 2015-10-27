@@ -1,0 +1,24 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Navn</th>
+        <th>Rolle</th>
+        <th>E-post</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each members}}
+        <tr>
+            <td>
+                <a href="/politicians/{{recno}}">{{name}}</a>
+            </td>
+            <td>
+                {{myRoleInCommittee}}
+            </td>
+            <td>
+                <a href="mailto:{{publicMail}}">{{publicMail}}</a>
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>

@@ -1,9 +1,11 @@
 {{#each committees}}
-    <h1>{{name}}</h1>
+    <div class="page-header">
+        <h1>{{name}}</h1>
+    </div>
 {{/each}}
 
-<h1>Medlemmer</h1>
+<div class="page-header">
+    <h1>Utvalgsmedlemmer</h1>
+</div>
 
-{{#each members}}
-    <a href="/politicians/{{recno}}">{{name}}</a> <a href="mailto:{{publicMail}}">{{publicMail}}</a> {{myRoleInCommittee}}<br>
-{{/each}}
+{{>members-committee}}
