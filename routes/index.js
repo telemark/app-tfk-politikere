@@ -86,9 +86,7 @@ var routes = [
   {
     method: 'GET',
     path: '/kontakt',
-    handler: function (request, reply) {
-      reply.view('kontakt')
-    }
+    handler: handlers.getContactInformation
   },
   {
     method: 'GET',

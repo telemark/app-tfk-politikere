@@ -1,9 +1,7 @@
 'use strict'
 
-var Path = require('path')
 var Hapi = require('hapi')
 var Hoek = require('hoek')
-
 var server = new Hapi.Server()
 var config = require('./config')
 var politicianService = require('./index')
@@ -13,7 +11,6 @@ server.connection({
 })
 
 server.register(require('vision'), function (err) {
-
   Hoek.assert(!err, err)
 
   server.views({
@@ -55,8 +52,6 @@ server.register([
     console.error('Failed to load a plugin:', err)
   }
 })
-
-
 
 function startServer () {
   server.start(function () {

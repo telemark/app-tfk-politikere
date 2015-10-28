@@ -12,11 +12,11 @@
     "publicMail": "stig.haddal@t-fk.no",
     "committees":[
       {
-        "name":"Fylkestinget (01.10.2015 - 30.09.2019)",
+        "name":"Fylkestinget",
         "groupRecno": 216162
       },
       {
-        "name":"Fylkesutvalet (01.10.2015 - 30.09.2019)",
+        "name":"Fylkesutvalet",
         "groupRecno": 216167
       }
     ]
@@ -34,15 +34,15 @@
     "publicMail": "liss.haraldsen@t-fk.no",
     "committees":[
       {
-        "name":"Hovudutval for kompetanse 2015 - 2019 (01.10.2015 - 30.09.2019)",
+        "name":"Hovudutval for kompetanse",
         "groupRecno": 217336
       },
       {
-        "name":"Telemark fylkeskommunale klagenemnd (01.10.2015 - 30.09.2019)",
+        "name":"Telemark fylkeskommunale klagenemnd",
         "groupRecno": 217338
       },
       {
-        "name":"Yrkesopplæringsnemnda (01.01.2016 - 31.12.2019)",
+        "name":"Yrkesopplæringsnemnda",
         "groupRecno": 217342
       }
     ]
@@ -60,23 +60,23 @@
     "publicMail": "evy.halvdansdatter-wang@t-fk.no",
     "committees":[
       {
-        "name":"Fylkeskommunalt råd for personer med nedsatt funksjonsevne (01.01.2016 - 31.12.2019)",
+        "name":"Fylkeskommunalt råd for personer med nedsatt funksjonsevne",
         "groupRecno": 217345
       },
       {
-        "name":"Hovudutval for samferdsel (01.10.2015 - 30.09.2019)",
+        "name":"Hovudutval for samferdsel",
         "groupRecno": 217337
       },
       {
-        "name":"Hovudutval for kultur (01.10.2015 - 30.09.2019)",
+        "name":"Hovudutval for kultur",
         "groupRecno": 217339
       },
       {
-        "name":"Klagenemnda for skolesaker (01.10.2015 - 30.09.2019)",
+        "name":"Klagenemnda for skolesaker",
         "groupRecno": 217341
       },
       {
-        "name":"Telemark fylkeskommunale eldreråd (01.01.2016 - 31.12.2019)",
+        "name":"Telemark fylkeskommunale eldreråd",
         "groupRecno": 217344
       }
     ]
@@ -94,7 +94,7 @@
     "publicMail": "kirsten-helen.andersen@t-fk.no",
     "committees":[
       {
-        "name":"Administrasjonsutvalet (01.10.2015 - 01.10.2019)",
+        "name":"Administrasjonsutvalet",
         "groupRecno": 217642
       },
       {
@@ -102,7 +102,7 @@
         "groupRecno": null
       },
       {
-        "name":"Hovudutval for næringsutvikling (01.10.2015 - 30.09.2019)",
+        "name":"Hovudutval for næringsutvikling",
         "groupRecno": 217335
       }
     ]

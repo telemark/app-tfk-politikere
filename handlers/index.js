@@ -12,7 +12,7 @@ function getFrontpage (request, reply) {
   var jobsDone = 0
 
   function allAboard () {
-    jobsDone ++
+    jobsDone++
     if (jobsDone === jobsToDo) {
       reply.view('index', viewOptions)
     }
@@ -84,7 +84,7 @@ function getParty (request, reply) {
   var jobsDone = 0
 
   function allAboard () {
-    jobsDone ++
+    jobsDone++
     if (jobsDone === jobsToDo) {
       reply.view('party', viewOptions)
     }
@@ -133,7 +133,7 @@ function getCommittee (request, reply) {
   var jobsDone = 0
 
   function allAboard () {
-    jobsDone ++
+    jobsDone++
     if (jobsDone === jobsToDo) {
       reply.view('committee', viewOptions)
     }
@@ -156,7 +156,6 @@ function getCommittee (request, reply) {
       allAboard()
     }
   })
-
 }
 
 function getCommitteeMembers (request, reply) {
@@ -164,6 +163,11 @@ function getCommitteeMembers (request, reply) {
   Wreck.get(config.API_URL + '/committees/' + cID + '/members', wreckOptions, function (error, res, payload) {
     reply(error || payload)
   })
+}
+
+function getContactInformation (request, reply) {
+  var contacts = require('../config/contacts.json')
+  reply.view('kontakt', {contacts: contacts})
 }
 
 module.exports.getFrontpage = getFrontpage
@@ -185,3 +189,5 @@ module.exports.getCommittees = getCommittees
 module.exports.getCommittee = getCommittee
 
 module.exports.getCommitteeMembers = getCommitteeMembers
+
+module.exports.getContactInformation = getContactInformation
