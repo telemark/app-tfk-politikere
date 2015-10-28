@@ -12,12 +12,12 @@
     "publicMail": "stig.haddal@t-fk.no",
     "committees":[
       {
-        "name":"Fylkestinget",
-        "groupRecno": "1"
+        "name":"Fylkestinget (01.10.2015 - 30.09.2019)",
+        "groupRecno": 216162
       },
       {
-        "name":"Fylkesutvalget",
-        "groupRecno": "5"
+        "name":"Fylkesutvalet (01.10.2015 - 30.09.2019)",
+        "groupRecno": 216167
       }
     ]
   },
@@ -34,16 +34,16 @@
     "publicMail": "liss.haraldsen@t-fk.no",
     "committees":[
       {
-        "name":"Hovedutvalg for kompetanse",
-        "groupRecno": "8"
+        "name":"Hovudutval for kompetanse 2015 - 2019 (01.10.2015 - 30.09.2019)",
+        "groupRecno": 217336
       },
       {
-        "name":"Telemark fylkeskommunale klagenemnd",
-        "groupRecno": "21"
+        "name":"Telemark fylkeskommunale klagenemnd (01.10.2015 - 30.09.2019)",
+        "groupRecno": 217338
       },
       {
-        "name":"Yrkesopplæringsnemda",
-        "groupRecno": "6"
+        "name":"Yrkesopplæringsnemnda (01.01.2016 - 31.12.2019)",
+        "groupRecno": 217342
       }
     ]
   },
@@ -60,24 +60,24 @@
     "publicMail": "evy.halvdansdatter-wang@t-fk.no",
     "committees":[
       {
-        "name":"Fylkeskommunalt råd for personer med nedsatt funksjonsevne",
-        "groupRecno": "20"
+        "name":"Fylkeskommunalt råd for personer med nedsatt funksjonsevne (01.01.2016 - 31.12.2019)",
+        "groupRecno": 217345
       },
       {
-        "name":"Hovedutvalg for samferdsel",
-        "groupRecno": "3"
+        "name":"Hovudutval for samferdsel (01.10.2015 - 30.09.2019)",
+        "groupRecno": 217337
       },
       {
-        "name":"Hovedutvalg for kultur",
-        "groupRecno": "7"
+        "name":"Hovudutval for kultur (01.10.2015 - 30.09.2019)",
+        "groupRecno": 217339
       },
       {
-        "name":"Klagenemnd for skolesaker",
-        "groupRecno": "22"
+        "name":"Klagenemnda for skolesaker (01.10.2015 - 30.09.2019)",
+        "groupRecno": 217341
       },
       {
-        "name":"Telemark fylkeskommunale eldreråd",
-        "groupRecno": "19"
+        "name":"Telemark fylkeskommunale eldreråd (01.01.2016 - 31.12.2019)",
+        "groupRecno": 217344
       }
     ]
   },
@@ -94,16 +94,16 @@
     "publicMail": "kirsten-helen.andersen@t-fk.no",
     "committees":[
       {
-        "name":"Administrasjonsutvalget",
-        "groupRecno": "4"
+        "name":"Administrasjonsutvalet (01.10.2015 - 01.10.2019)",
+        "groupRecno": 217642
       },
       {
         "name":"Forhandlingsutvalget",
-        "groupRecno": "10"
+        "groupRecno": null
       },
       {
-        "name":"Hovedutvalg for næringsutvikling",
-        "groupRecno": "2"
+        "name":"Hovudutval for næringsutvikling (01.10.2015 - 30.09.2019)",
+        "groupRecno": 217335
       }
     ]
   },
@@ -121,7 +121,7 @@
     "committees":[
       {
         "name":"Kontrollutvalget",
-        "groupRecno": "9"
+        "groupRecno": null
       }
     ]
   }
