@@ -1,0 +1,128 @@
+[
+  {
+    "recno": null,
+    "name": "Stig Haddal",
+    "phone": "+47 35 91 72 49",
+    "title": null,
+    "privateMail": null,
+    "mobilePhone":"995 51 054",
+    "zip": null,
+    "address": null,
+    "gender": "Mann",
+    "publicMail": "stig.haddal@t-fk.no",
+    "committees":[
+      {
+        "name":"Fylkestinget",
+        "groupRecno": "1"
+      },
+      {
+        "name":"Fylkesutvalget",
+        "groupRecno": "5"
+      }
+    ]
+  },
+  {
+    "recno": null,
+    "name": "Liss Haraldsen",
+    "phone": "+47 35 91 73 06",
+    "title": null,
+    "privateMail": null,
+    "mobilePhone":"+47 402 02 454",
+    "zip": null,
+    "address": null,
+    "gender": "Kvinne",
+    "publicMail": "liss.haraldsen@t-fk.no",
+    "committees":[
+      {
+        "name":"Hovedutvalg for kompetanse",
+        "groupRecno": "8"
+      },
+      {
+        "name":"Telemark fylkeskommunale klagenemnd",
+        "groupRecno": "21"
+      },
+      {
+        "name":"Yrkesopplæringsnemda",
+        "groupRecno": "6"
+      }
+    ]
+  },
+  {
+    "recno": null,
+    "name": "Evy Halvdansdatter Wang",
+    "phone": "+47 35 91 72 29",
+    "title": null,
+    "privateMail": null,
+    "mobilePhone":"+47 990 40 011",
+    "zip": null,
+    "address": null,
+    "gender": "Kvinne",
+    "publicMail": "evy.halvdansdatter-wang@t-fk.no",
+    "committees":[
+      {
+        "name":"Fylkeskommunalt råd for personer med nedsatt funksjonsevne",
+        "groupRecno": "20"
+      },
+      {
+        "name":"Hovedutvalg for samferdsel",
+        "groupRecno": "3"
+      },
+      {
+        "name":"Hovedutvalg for kultur",
+        "groupRecno": "7"
+      },
+      {
+        "name":"Klagenemnd for skolesaker",
+        "groupRecno": "22"
+      },
+      {
+        "name":"Telemark fylkeskommunale eldreråd",
+        "groupRecno": "19"
+      }
+    ]
+  },
+  {
+    "recno": null,
+    "name": "Helèn Andersen",
+    "phone": "+47 35 91 73 02",
+    "title": null,
+    "privateMail": null,
+    "mobilePhone":"+47 948 37 771",
+    "zip": null,
+    "address": null,
+    "gender": "Kvinne",
+    "publicMail": "kirsten-helen.andersen@t-fk.no",
+    "committees":[
+      {
+        "name":"Administrasjonsutvalget",
+        "groupRecno": "4"
+      },
+      {
+        "name":"Forhandlingsutvalget",
+        "groupRecno": "10"
+      },
+      {
+        "name":"Hovedutvalg for næringsutvikling",
+        "groupRecno": "2"
+      }
+    ]
+  },
+  {
+    "recno": null,
+    "name": "Line Bosnes",
+    "phone": "",
+    "title": null,
+    "privateMail": null,
+    "mobilePhone":"+47 906 56 426",
+    "zip": null,
+    "address": null,
+    "gender": "Kvinne",
+    "publicMail": "line.bosnes@temark.no",
+    "committees":[
+      {
+        "name":"Kontrollutvalget",
+        "groupRecno": "9"
+      }
+    ]
+  }
+]
