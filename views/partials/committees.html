@@ -1,16 +1,18 @@
-<table class="table table-striped">
-    <thead>
-    <tr>
-        <th>Utvalg</th>
-    </tr>
-    </thead>
-    <tbody>
-    {{#each committees}}
-    <tr>
-        <td>
-            <a href="/committees/{{_id}}">{{name}}</a>
-        </td>
-    </tr>
-    {{/each}}
-    </tbody>
-</table>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Utvalg</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each committees}}
+        <tr>
+            <td>
+                <a href="/committees/{{_id}}">{{name}}</a>
+            </td>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>

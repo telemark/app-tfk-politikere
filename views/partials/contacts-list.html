@@ -1,41 +1,43 @@
-<table class="table table-striped">
-    <thead>
-    <tr>
-        <th>Navn</th>
-        <th>E-post</th>
-        <th>Mobil</th>
-        <th>Telefon</th>
-        <th>Utvalg</th>
-    </tr>
-    </thead>
-    <tbody>
-        {{#each contacts}}
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
         <tr>
-            <td>{{name}}</td>
-            <td>
-                {{#if publicMail}}
-                <span class="glyphicon glyphicon-envelope"></span>
-                <a href="mailto:{{publicMail}}" title="Send e-post til {{publicMail}}">{{publicMail}}</a>
-                {{/if}}
-            </td>
-            <td>
-                {{#if mobilePhone}}
-                <span class="glyphicon glyphicon-phone"></span>
-                <a href="tel:{{mobilePhone}}" title="Ring til mobiltelefonnummeret {{mobilePhone}}">{{mobilePhone}}</a>&nbsp;
-                {{/if}}
-            </td>
-            <td>
-                {{#if phone}}
-                <span class="glyphicon glyphicon-phone-alt"></span>
-                <a href="tel:{{phone}}" title="Ring til telefonnummeret {{phone}}">{{phone}}</a>
-                {{/if}}
-            </td>
-            <td>
-                {{#each committees}}
-                    <a href="/committees/{{groupRecno}}" title="Gå til detaljsiden for utvalget">{{name}}</a><br/>
-                {{/each}}
-            </td>
+            <th>Navn</th>
+            <th>E-post</th>
+            <th>Mobil</th>
+            <th>Telefon</th>
+            <th>Utvalg</th>
         </tr>
-        {{/each}}
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            {{#each contacts}}
+            <tr>
+                <td>{{name}}</td>
+                <td>
+                    {{#if publicMail}}
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    <a href="mailto:{{publicMail}}" title="Send e-post til {{publicMail}}">{{publicMail}}</a>
+                    {{/if}}
+                </td>
+                <td>
+                    {{#if mobilePhone}}
+                    <span class="glyphicon glyphicon-phone"></span>
+                    <a href="tel:{{mobilePhone}}" title="Ring til mobiltelefonnummeret {{mobilePhone}}">{{mobilePhone}}</a>&nbsp;
+                    {{/if}}
+                </td>
+                <td>
+                    {{#if phone}}
+                    <span class="glyphicon glyphicon-phone-alt"></span>
+                    <a href="tel:{{phone}}" title="Ring til telefonnummeret {{phone}}">{{phone}}</a>
+                    {{/if}}
+                </td>
+                <td>
+                    {{#each committees}}
+                        <a href="/committees/{{groupRecno}}" title="Gå til detaljsiden for utvalget">{{name}}</a><br/>
+                    {{/each}}
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

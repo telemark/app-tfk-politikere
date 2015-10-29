@@ -1,16 +1,18 @@
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Parti</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each parties}}
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
             <tr>
-                <td>
-                    <a href="/parties/{{_id}}">{{name}}</a>
-                </td>
+                <th>Parti</th>
             </tr>
-        {{/each}}
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            {{#each parties}}
+                <tr>
+                    <td>
+                        <a href="/parties/{{_id}}">{{name}}</a>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

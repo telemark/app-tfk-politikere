@@ -1,41 +1,43 @@
-<table class="table table-striped">
-    <thead>
-    <tr>
-        <th>Navn</th>
-        <th>Rolle</th>
-        <th>E-post</th>
-        <th>Mobil</th>
-        <th>Telefon</th>
-    </tr>
-    </thead>
-    <tbody>
-    {{#each members}}
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
         <tr>
-            <td>
-                <a href="/politicians/{{recno}}" title="Gå til detaljert oversikt for {{name}}">{{name}}</a>
-            </td>
-            <td>
-                {{myRoleInCommittee}}
-            </td>
-            <td>
-                {{#if publicMail}}
-                    <span class="glyphicon glyphicon-envelope"></span>
-                    <a href="mailto:{{publicMail}}" title="Send e-post til {{publicMail}}">{{publicMail}}</a>
-                {{/if}}
-            </td>
-            <td>
-                {{#if mobilePhone}}
-                    <span class="glyphicon glyphicon-phone"></span>
-                    <a href="tel:{{mobilePhone}}" title="Ring til mobiltelefonnummeret {{mobilePhone}}">{{mobilePhone}}</a>&nbsp;
-                {{/if}}
-            </td>
-            <td>
-                {{#if phone}}
-                <span class="glyphicon glyphicon-phone-alt"></span>
-                <a href="tel:{{phone}}" title="Ring til telefonnummeret {{phone}}">{{phone}}</a>
-                {{/if}}
-            </td>
+            <th>Navn</th>
+            <th>Rolle</th>
+            <th>E-post</th>
+            <th>Mobil</th>
+            <th>Telefon</th>
         </tr>
-    {{/each}}
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        {{#each members}}
+            <tr>
+                <td>
+                    <a href="/politicians/{{recno}}" title="Gå til detaljert oversikt for {{name}}">{{name}}</a>
+                </td>
+                <td>
+                    {{myRoleInCommittee}}
+                </td>
+                <td>
+                    {{#if publicMail}}
+                        <span class="glyphicon glyphicon-envelope"></span>
+                        <a href="mailto:{{publicMail}}" title="Send e-post til {{publicMail}}">{{publicMail}}</a>
+                    {{/if}}
+                </td>
+                <td>
+                    {{#if mobilePhone}}
+                        <span class="glyphicon glyphicon-phone"></span>
+                        <a href="tel:{{mobilePhone}}" title="Ring til mobiltelefonnummeret {{mobilePhone}}">{{mobilePhone}}</a>&nbsp;
+                    {{/if}}
+                </td>
+                <td>
+                    {{#if phone}}
+                    <span class="glyphicon glyphicon-phone-alt"></span>
+                    <a href="tel:{{phone}}" title="Ring til telefonnummeret {{phone}}">{{phone}}</a>
+                    {{/if}}
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
