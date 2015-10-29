@@ -19,7 +19,8 @@
             </ul>
             <form action="/search" class="navbar-form navbar-right">
                 <div class="form-group">
-                    <input type="text" name="query" value="{{query}}" placeholder="Søk etter politiker" class="form-control search-field"/>
+                    <label for="searchtext" class=".sr-only">Søk etter politiker</label>
+                    <input type="text" name="query" value="{{query}}" placeholder="Søk etter politiker" id="searchtext" class="form-control search-field"/>
                 </div>
                 <button type="submit" class="btn btn-success">Søk</button>
             </form>
