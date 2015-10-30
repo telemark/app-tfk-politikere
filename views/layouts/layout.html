@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Politikere og utvalg - Telemark fylkeskommune</title>
-    <!-- Bootstrap -->
-    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/public/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="/public/css/custom.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+
+        @-moz-document url-prefix() {
+            fieldset { display: table-cell; }
+        }
+    </style>
+    <link href="/public/css/bootstrap-merged.min.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,13 +31,13 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="/public/js/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/public/js/bootstrap.min.js"></script>
+<script src="/public/js/bootstrap.min.js" async="async" defer="defer"></script>
 
 <script>
-    // Handles resizing on mobile
-    $(window).on('resize load', function() {
-        $('body').css({"padding-top": $(".navbar").height() + "px"});
-    });
+  // Handles resizing on mobile
+  $(window).on('resize load', function() {
+    $('body').css({"padding-top": $(".navbar").height() + "px"});
+  });
 </script>
 </body>
 </html>
