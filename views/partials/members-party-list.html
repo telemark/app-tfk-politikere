@@ -1,12 +1,13 @@
 <div class="table-responsive">
     <table data-toggle="table" data-striped="true">
         <thead>
-            <tr>
-                <th data-sortable="true" data-field="name">Navn</th>
-                <th>Parti</th>
-                <th>E-post</th>
-                <th>Telefon</th>
-            </tr>
+        <tr>
+            <th>Navn</th>
+            <th>Rolle</th>
+            <th>E-post</th>
+            <th>Mobil</th>
+            <th>Telefon</th>
+        </tr>
         </thead>
         <tbody>
         {{#each members}}
@@ -15,10 +16,11 @@
                 <a href="/politicians/{{recno}}" title="Gå til detaljert oversikt for {{name}}">{{name}}</a>
             </td>
             <td>
-                {{{myPoliticalPartyLink}}}
+                {{myRoleInCommittee}}
             </td>
             <td>
                 {{#if publicMail}}
+                <span class="glyphicon glyphicon-envelope"></span>
                 <a href="mailto:{{publicMail}}" title="Send e-post til {{publicMail}}">{{publicMail}}</a>
                 {{/if}}
             </td>
@@ -27,6 +29,8 @@
                 <span class="glyphicon glyphicon-phone"></span>
                 <a href="tel:{{mobilePhone}}" title="Ring til mobiltelefonnummeret {{mobilePhone}}">{{mobilePhone}}</a>&nbsp;
                 {{/if}}
+            </td>
+            <td>
                 {{#if phone}}
                 <span class="glyphicon glyphicon-phone-alt"></span>
                 <a href="tel:{{phone}}" title="Ring til telefonnummeret {{phone}}">{{phone}}</a>

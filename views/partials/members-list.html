@@ -1,9 +1,10 @@
 <div class="table-responsive">
-    <table class="table table-striped">
+    <table data-toggle="table" data-sort-name="rolle" data-striped="true">
         <thead>
         <tr>
             <th>Navn</th>
-            <th>Rolle</th>
+            <th data-sortable="true" data-field="rolle">Rolle</th>
+            <th>Parti</th>
             <th>E-post</th>
             <th>Mobil</th>
             <th>Telefon</th>
@@ -16,7 +17,10 @@
                     <a href="/politicians/{{recno}}" title="Gå til detaljert oversikt for {{name}}">{{name}}</a>
                 </td>
                 <td>
-                    {{myRoleInCommittee}}
+                   {{myRoleInCommittee}}
+                </td>
+                <td>
+                    {{{myPoliticalPartyLink}}}
                 </td>
                 <td>
                     {{#if publicMail}}

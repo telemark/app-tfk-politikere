@@ -51,7 +51,7 @@ function searchPoliticians (request, reply) {
     if (error) {
       reply(error)
     } else {
-      reply.view('search', {politicians: payload, query: searchText})
+      reply.view('search', {members: payload, query: searchText})
     }
   })
 }
