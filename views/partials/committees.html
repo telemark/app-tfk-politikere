@@ -1,15 +1,15 @@
 <div class="table-responsive">
-    <table data-toggle="table" data-striped="true">
+    <table data-toggle="table" data-sort-name="utvalg" data-striped="true">
         <thead>
         <tr>
-            <th>Utvalg</th>
+            <th data-field="utvalg"  data-sortable="true">Utvalg</th>
         </tr>
         </thead>
         <tbody>
         {{#each committees}}
         <tr>
             <td>
-                <a href="/committees/{{_id}}">{{name}}</a>
+                <span class="hidden">{{name}}</span><a href="/committees/{{_id}}">{{name}}</a>
             </td>
         </tr>
         {{/each}}

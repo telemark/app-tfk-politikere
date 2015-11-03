@@ -1,15 +1,15 @@
 <div class="table-responsive">
-    <table data-toggle="table" data-striped="true">
+    <table data-toggle="table" data-sort-name="parti" data-striped="true">
         <thead>
             <tr>
-                <th>Parti</th>
+                <th data-field="parti"  data-sortable="true">Parti</th>
             </tr>
         </thead>
         <tbody>
             {{#each parties}}
-                <tr>
+                <tr data-title="{{name}}"">
                     <td>
-                        <a href="/parties/{{_id}}">{{name}}</a>
+                        <span class="hidden">{{name}}</span><a href="/parties/{{_id}}">{{name}}</a>
                     </td>
                 </tr>
             {{/each}}

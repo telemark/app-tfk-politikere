@@ -1,5 +1,5 @@
 <div class="table-responsive">
-    <table data-toggle="table" data-striped="true">
+    <table data-toggle="table" data-sort-name="name" data-striped="true">
         <thead>
             <tr>
                 <th data-sortable="true" data-field="name">Navn</th>
@@ -12,7 +12,7 @@
         {{#each members}}
         <tr>
             <td>
-                <a href="/politicians/{{recno}}" title="Gå til detaljert oversikt for {{name}}">{{name}}</a>
+                <span class="hidden">{{name}}</span><a href="/politicians/{{recno}}" title="Gå til detaljert oversikt for {{name}}">{{name}}</a>
             </td>
             <td>
                 {{{myPoliticalPartyLink}}}
