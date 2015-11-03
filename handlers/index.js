@@ -47,13 +47,17 @@ function getPoliticians (request, reply) {
 
 function searchPoliticians (request, reply) {
   var searchText = request.query.query
-  Wreck.get(config.API_URL + '/politicians/search/' + searchText, wreckOptions, function (error, res, payload) {
-    if (error) {
-      reply(error)
-    } else {
-      reply.view('search', {members: payload, query: searchText})
-    }
-  })
+  if (searchText) {
+    Wreck.get(config.API_URL + '/politicians/search/' + searchText, wreckOptions, function (error, res, payload) {
+      if (error) {
+        reply(error)
+      } else {
+        reply.view('search', {members: payload, query: searchText})
+      }
+    })
+  } else {
+    reply.view('search', {members: [], query: searchText})
+  }
 }
 
 function getPolitician (request, reply) {
