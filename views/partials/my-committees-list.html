@@ -1,8 +1,8 @@
 <div class="table-responsive">
-    <table class="table table-striped">
+    <table data-toggle="table" data-sort-name="utvalg" data-striped="true" class="table table-striped table-hover">
         <thead>
         <tr>
-            <th>Parti/utvalg</th>
+            <th data-field="utvalg"  data-sortable="true">Parti/utvalg</th>
             <th>Rolle</th>
         </tr>
         </thead>
@@ -10,7 +10,7 @@
             {{#each committees}}
                 <tr>
                     <td>
-                        <a href="/{{linkToPartyOrCommittee}}/{{groupRecno}}">{{name}}</a>
+                        <span class="hidden">{{name}}</span><a href="/{{linkToPartyOrCommittee}}/{{groupRecno}}">{{name}}</a>
                     </td>
                     <td>
                         {{roleDescription}}
