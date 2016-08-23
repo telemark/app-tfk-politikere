@@ -14,7 +14,7 @@
   "homepage": "https://github.com/telemark/app-tfk-politikere",
   "main": "index.js",
   "engines": {
-    "node": ">=4.2.0"
+    "node": ">=4.5.0"
   },
   "scripts": {
     "test": "standard && tap --reporter=spec test/*.js",

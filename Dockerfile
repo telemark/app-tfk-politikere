@@ -4,13 +4,19 @@
 #
 ###########################################################
 
-# Setting the base to nodejs 4.2
-FROM node:4.2
+# Setting the base to nodejs 4.5.0
+FROM mhart/alpine-node:4.5.0
 
 # Maintainer
 MAINTAINER Geir Gåsodden
 
 #### Begin setup ####
+
+# Installs git
+RUN apk add --update --no-cache git
+
+# Extra tools for native dependencies
+RUN apk add --no-cache make gcc g++ python
 
 # Bundle app source
 COPY . /src
@@ -19,7 +25,7 @@ COPY . /src
 WORKDIR "/src"
 
 # Install dependencies
-RUN npm install
+RUN npm install --production
 
 # Expose 8000
 EXPOSE 8000
