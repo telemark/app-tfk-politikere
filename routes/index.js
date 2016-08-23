@@ -1,8 +1,8 @@
 'use strict'
 
-var handlers = require('../handlers')
+const handlers = require('../handlers')
 
-var routes = [
+module.exports = [
   {
     method: 'GET',
     path: '/',
@@ -96,5 +96,3 @@ var routes = [
     }
   }
 ]
-
-module.exports = routes

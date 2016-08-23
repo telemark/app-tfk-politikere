@@ -60,24 +60,12 @@
     "publicMail": "evy.halvdansdatter-wang@t-fk.no",
     "committees":[
       {
-        "name":"Fylkeskommunalt råd for personer med nedsatt funksjonsevne",
-        "groupRecno": 217345
-      },
-      {
         "name":"Hovudutval for samferdsel",
         "groupRecno": 217337
       },
       {
-        "name":"Hovudutval for kultur",
-        "groupRecno": 217339
-      },
-      {
         "name":"Klagenemnda for skolesaker",
         "groupRecno": 217341
-      },
-      {
-        "name":"Telemark fylkeskommunale eldreråd",
-        "groupRecno": 217344
       }
     ]
   },
@@ -122,6 +110,32 @@
       {
         "name":"Kontrollutvalget",
         "groupRecno": null
+      }
+    ]
+  },
+  {
+    "recno": null,
+    "name": "Renate Strand",
+    "phone": "+47 35 91 70 22",
+    "title": null,
+    "privateMail": null,
+    "mobilePhone":"+47 404 56 067",
+    "zip": null,
+    "address": null,
+    "gender": "Kvinne",
+    "publicMail": "renate.strand@t-fk.no",
+    "committees":[
+      {
+        "name":"Fylkeskommunalt råd for personer med nedsatt funksjonsevne",
+        "groupRecno": 217345
+      },
+      {
+        "name":"Hovudutval for kultur",
+        "groupRecno": 217339
+      },
+      {
+        "name":"Telemark fylkeskommunale eldreråd",
+        "groupRecno": 217344
       }
     ]
   }

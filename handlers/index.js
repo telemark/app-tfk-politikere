@@ -1,12 +1,12 @@
 'use strict'
 
-var Wreck = require('wreck')
-var config = require('../config')
+const Wreck = require('wreck')
+const config = require('../config')
 var wreckOptions = {
   json: true
 }
 
-function getFrontpage (request, reply) {
+module.exports.getFrontpage = (request, reply) => {
   var viewOptions = {}
   var jobsToDo = 2
   var jobsDone = 0
@@ -37,7 +37,7 @@ function getFrontpage (request, reply) {
   })
 }
 
-function getPoliticians (request, reply) {
+module.exports.getPoliticians = (request, reply) => {
   var skipNum = request.query.skip ? parseInt(request.query.skip, 10) : 0
   var limitNum = request.query.limit ? parseInt(request.query.limit, 10) : 20
   Wreck.get(config.API_URL + '/politicians?skip=' + skipNum + '&limit=' + limitNum, wreckOptions, function (error, res, payload) {
@@ -45,7 +45,7 @@ function getPoliticians (request, reply) {
   })
 }
 
-function searchPoliticians (request, reply) {
+module.exports.searchPoliticians = (request, reply) => {
   var searchText = request.query.query
   if (searchText) {
     Wreck.get(config.API_URL + '/politicians/search/' + searchText, wreckOptions, function (error, res, payload) {
@@ -60,7 +60,7 @@ function searchPoliticians (request, reply) {
   }
 }
 
-function getPolitician (request, reply) {
+module.exports.getPolitician = (request, reply) => {
   var pID = parseInt(request.params.politicianID, 10)
   Wreck.get(config.API_URL + '/politicians/' + pID, wreckOptions, function (error, res, payload) {
     if (error) {
@@ -71,7 +71,7 @@ function getPolitician (request, reply) {
   })
 }
 
-function getParties (request, reply) {
+module.exports.getParties = (request, reply) => {
   Wreck.get(config.API_URL + '/parties', wreckOptions, function (error, res, payload) {
     if (error) {
       reply(error)
@@ -81,7 +81,7 @@ function getParties (request, reply) {
   })
 }
 
-function getParty (request, reply) {
+module.exports.getParty = (request, reply) => {
   var pID = parseInt(request.params.partyID, 10)
   var viewOptions = {}
   var jobsToDo = 2
@@ -113,14 +113,14 @@ function getParty (request, reply) {
   })
 }
 
-function getPartyMembers (request, reply) {
+module.exports.getPartyMembers = (request, reply) => {
   var pID = parseInt(request.params.partyID, 10)
   Wreck.get(config.API_URL + '/parties/' + pID + '/members', wreckOptions, function (error, res, payload) {
     reply(error || payload)
   })
 }
 
-function getCommittees (request, reply) {
+module.exports.getCommittees = (request, reply) => {
   Wreck.get(config.API_URL + '/committees', wreckOptions, function (error, res, payload) {
     if (error) {
       reply(error)
@@ -130,7 +130,7 @@ function getCommittees (request, reply) {
   })
 }
 
-function getCommittee (request, reply) {
+module.exports.getCommittee = (request, reply) => {
   var cID = parseInt(request.params.committeeID, 10)
   var viewOptions = {}
   var jobsToDo = 2
@@ -162,36 +162,14 @@ function getCommittee (request, reply) {
   })
 }
 
-function getCommitteeMembers (request, reply) {
+module.exports.getCommitteeMembers = (request, reply) => {
   var cID = parseInt(request.params.committeeID, 10)
   Wreck.get(config.API_URL + '/committees/' + cID + '/members', wreckOptions, function (error, res, payload) {
     reply(error || payload)
   })
 }
 
-function getContactInformation (request, reply) {
+module.exports.getContactInformation = (request, reply) => {
   var contacts = require('../config/contacts.json')
   reply.view('kontakt', {contacts: contacts})
 }
-
-module.exports.getFrontpage = getFrontpage
-
-module.exports.getPoliticians = getPoliticians
-
-module.exports.searchPoliticians = searchPoliticians
-
-module.exports.getPolitician = getPolitician
-
-module.exports.getParties = getParties
-
-module.exports.getParty = getParty
-
-module.exports.getPartyMembers = getPartyMembers
-
-module.exports.getCommittees = getCommittees
-
-module.exports.getCommittee = getCommittee
-
-module.exports.getCommitteeMembers = getCommitteeMembers
-
-module.exports.getContactInformation = getContactInformation
