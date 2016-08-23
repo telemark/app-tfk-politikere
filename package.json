@@ -38,12 +38,11 @@
     "tap": "6.3.2"
   },
   "dependencies": {
-    "handlebars": "^4.0.3",
-    "hapi": "^11.0.2",
-    "hoek": "^2.16.3",
-    "inert": "^3.2.0",
-    "path": "^0.12.7",
-    "vision": "^3.0.0",
-    "wreck": "^6.3.0"
+    "handlebars": "4.0.5",
+    "hapi": "14.2.0",
+    "hoek": "4.0.2",
+    "inert": "4.0.1",
+    "vision": "4.1.0",
+    "wreck": "9.0.0"
   }
 }
