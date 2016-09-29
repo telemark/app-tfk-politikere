@@ -1,6 +1,6 @@
 {
   "name": "app.tfk-politikere",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Listings of politicians, committees and political parties",
   "license": "MIT",
   "author": {
@@ -14,7 +14,7 @@
   "homepage": "https://github.com/telemark/app-tfk-politikere",
   "main": "index.js",
   "engines": {
-    "node": ">=4.5.0"
+    "node": ">=4.6.0"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/*.js",
