@@ -36,7 +36,7 @@
     "coveralls": "2.13.3",
     "nsp": "2.8.1",
     "standard": "8.6.0",
-    "tap": "10.0.2"
+    "tap": "10.7.3"
   },
   "dependencies": {
     "handlebars": "4.0.6",
