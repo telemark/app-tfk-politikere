@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "handlebars": "4.0.12",
-    "hapi": "16.6.3",
+    "hapi": "16.6.4",
     "hoek": "5.0.4",
     "inert": "4.2.1",
     "vision": "4.1.1",
