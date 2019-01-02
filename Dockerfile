@@ -1,14 +1,5 @@
-###########################################################
-#
-# Dockerfile for app-tfk-politikere
-#
-###########################################################
-
 # Setting the base to nodejs 4.6.0
-FROM mhart/alpine-node:4.9.1@sha256:c47433a256be0bc5314eb8288ea8fae7466d283d91f1da7ff950f91e43838b33
-
-# Maintainer
-MAINTAINER Geir Gåsodden
+FROM mhart/alpine-node:10.15.0
 
 #### Begin setup ####
 
