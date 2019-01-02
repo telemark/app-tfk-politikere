@@ -52,11 +52,11 @@ module.exports.searchPoliticians = (request, reply) => {
       if (error) {
         reply(error)
       } else {
-        reply.view('search', {members: payload, query: searchText})
+        reply.view('search', { members: payload, query: searchText })
       }
     })
   } else {
-    reply.view('search', {members: [], query: searchText})
+    reply.view('search', { members: [], query: searchText })
   }
 }
 
@@ -66,7 +66,7 @@ module.exports.getPolitician = (request, reply) => {
     if (error) {
       reply(error)
     } else {
-      reply.view('politician', {politicians: payload})
+      reply.view('politician', { politicians: payload })
     }
   })
 }
@@ -76,7 +76,7 @@ module.exports.getParties = (request, reply) => {
     if (error) {
       reply(error)
     } else {
-      reply.view('parties', {parties: payload})
+      reply.view('parties', { parties: payload })
     }
   })
 }
@@ -125,7 +125,7 @@ module.exports.getCommittees = (request, reply) => {
     if (error) {
       reply(error)
     } else {
-      reply.view('committees', {committees: payload})
+      reply.view('committees', { committees: payload })
     }
   })
 }
@@ -171,5 +171,5 @@ module.exports.getCommitteeMembers = (request, reply) => {
 
 module.exports.getContactInformation = (request, reply) => {
   var contacts = require('../config/contacts.json')
-  reply.view('kontakt', {contacts: contacts})
+  reply.view('kontakt', { contacts: contacts })
 }

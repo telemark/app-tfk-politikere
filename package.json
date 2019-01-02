@@ -20,7 +20,9 @@
     "test": "standard && npm audit && tap --reporter=spec test/*.js",
     "coverage": "tap test/*.js --coverage",
     "coveralls": "tap --cov --coverage-report=lcov test/*.js && cat coverage/lcov.info | coveralls",
-    "start": "node standalone.js"
+    "start": "node standalone.js",
+    "standard-fix": "standard --fix",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
   },
   "standard": {
     "ignore": [
