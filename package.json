@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/telemark/app-tfk-politikere/issues"
   },
-  "homepage": "https://github.com/telemark/app-tfk-politikere",
+  "homepage": "https://github.com/telemark/app-tfk-politikere#readme",
   "main": "index.js",
   "engines": {
     "node": ">=10.0.0"
@@ -20,8 +20,7 @@
     "test": "standard && npm audit && tap --reporter=spec test/*.js",
     "coverage": "tap test/*.js --coverage",
     "coveralls": "tap --cov --coverage-report=lcov test/*.js && cat coverage/lcov.info | coveralls",
-    "start": "node standalone.js",
-    "setup": "npm install && node setup.js"
+    "start": "node standalone.js"
   },
   "standard": {
     "ignore": [
@@ -30,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/telemark/api.t-fk.politikere.git"
+    "url": "git+https://github.com/telemark/api.t-fk.politikere.git"
   },
   "devDependencies": {
     "coveralls": "3.0.2",
