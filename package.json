@@ -39,7 +39,7 @@
     "tap": "12.5.0"
   },
   "dependencies": {
-    "handlebars": "4.0.12",
+    "handlebars": "4.1.0",
     "hapi": "16.7.0",
     "hoek": "6.1.2",
     "inert": "4.2.1",
