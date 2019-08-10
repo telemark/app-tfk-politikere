@@ -1,5 +1,5 @@
 # Setting the base to nodejs 4.6.0
-FROM mhart/alpine-node:10.16.0
+FROM mhart/alpine-node:10.16.2
 
 #### Begin setup ####
 
